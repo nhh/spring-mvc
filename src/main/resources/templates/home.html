@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title th:text="${pageNumber}"></title>
+    <link rel="stylesheet" type="text/css" media="all" th:href="@{/bulma.min.css}" />
+  </head>
+    <body>
+      <div th:replace="fragments/navbar :: navbar"></div>
+      <div class="container">
+        <div class="columns">
+          <div class="column">
+            <div class="box">
+              <label class="label" th:text="${data.type}"></label>
+              <label class="label" th:text="${data.key}"></label>
+              <label class="label" th:text="${data.list.size()}"></label>
+              <label class="label" th:text="${data.title}"></label>
+              <a th:href="@{/home/{number}(number=${pageNumber + 1})}" class="button">Nächste Seite</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div th:replace="fragments/footer :: footer"></div>
+    </body>
+</html>
