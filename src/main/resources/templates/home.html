@@ -4,22 +4,94 @@
     <meta charset="UTF-8">
     <title th:text="${pageNumber}"></title>
     <link rel="stylesheet" type="text/css" media="all" th:href="@{/bulma.min.css}" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
   </head>
     <body>
-      <div th:replace="fragments/navbar :: navbar"></div>
-      <div class="container">
-        <div class="columns">
-          <div class="column">
-            <div class="box">
-              <label class="label" th:text="${data.type}"></label>
-              <label class="label" th:text="${data.key}"></label>
-              <label class="label" th:text="${data.list.size()}"></label>
-              <label class="label" th:text="${data.title}"></label>
-              <a th:href="@{/home/{number}(number=${pageNumber + 1})}" class="button">Nächste Seite</a>
+
+
+      <section class="hero is-success is-large">
+        <div th:replace="fragments/navbar :: navbar"></div>
+        <div class="hero-body" style="padding-top: 24px;">
+          <div class="container has-text-centered">
+            <h1 class="title">YELAW.HR GAMES</h1>
+            <h2 class="subtitle">YELAW.HR GAMES</h2>
+            <div class="columns">
+              <div class="column">
+                <div class="columns">
+                  <div class="column">
+                    <div class="columns">
+                      <div class="column">
+                        <div class="box">
+
+                        </div>
+                      </div>
+                      <div class="column">
+                        <div class="box">
+
+                        </div>
+                      </div>
+                    </div>
+                    <div class="columns">
+                      <div class="column">
+                        <div class="box">
+
+                        </div>
+                      </div>
+                      <div class="column">
+                        <div class="box">
+
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="column">
+                <div class="columns">
+                  <div class="column">
+                    <div class="box">
+                      Video
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
-      </div>
+      </section>
+      <section class="hero">
+        <div class="hero-body" style="padding-top: 24px;">
+          <div class="container is-fluid">
+            <div class="columns">
+              <div class="column is-1" style="margin-top: auto; margin-bottom: auto;">
+                <span class="icon is-large">
+                  <i class="fas fa-angle-left fa-3x"></i>
+                </span>
+              </div>
+              <div class="column">
+                <div class="box">
+                  Job Description 1#
+                </div>
+              </div>
+              <div class="column">
+                <div class="box">
+                  Job Description 2#
+                </div>
+              </div>
+              <div class="column">
+                <div class="box">
+                  Job Description 3#
+                </div>
+              </div>
+              <div class="column is-1">
+                <span class="icon is-large">
+                  <i class="fas fa-angle-right fa-3x"></i>
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
       <div th:replace="fragments/footer :: footer"></div>
     </body>
 </html>
