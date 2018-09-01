@@ -22,7 +22,6 @@ public class HomeController {
     public Callable<ModelAndView> home(
         ModelAndView model,
         @PathVariable Integer number
-
     ) {
         return () -> {
             var data = dataService
